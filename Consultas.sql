@@ -35,6 +35,8 @@ FROM evaluaciones
 GROUP BY calificacion_numerica
 ORDER BY calificacion_numerica;
 
+-- Consultas que ayudan a comprobar la correcta funcion del sistema
+
 -- 1. Listar todos los viajes con nombre del pasajero, nombre del conductor y método de pago
 SELECT v.id_viaje, p.nombre AS pasajero, c.nombre AS conductor, m.nombre_metodo, v.origen, v.destino, v.estado_viaje
 FROM Viajes v
@@ -132,4 +134,5 @@ LEFT JOIN evaluaciones e ON e.id_viaje = v.id_viaje
 GROUP BY c.id_conductor;
 
 -- Consulta de ejemplo
+
 SELECT * FROM vw_rendimiento_conductores ORDER BY calificacion_promedio DESC;

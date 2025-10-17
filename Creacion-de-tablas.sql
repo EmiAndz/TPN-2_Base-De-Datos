@@ -175,10 +175,10 @@ CREATE TABLE evaluaciones (
 
 -- =========================================================
 --  ÍNDICES ÚTILES (ayudan a las consultas del TP)
---  (Los FKs ya crean índices, agregamos algunos adicionales)
 -- =========================================================
 CREATE INDEX ix_viajes_fecha               ON viajes (fecha, hora);
 CREATE INDEX ix_viajes_estado              ON viajes (estado_viaje);
 CREATE INDEX ix_viajes_pasajero_fecha      ON viajes (id_pasajero, fecha);
 CREATE INDEX ix_viajes_conductor_fecha     ON viajes (id_conductor, fecha);
 CREATE INDEX ix_evaluaciones_calificacion  ON evaluaciones (calificacion_numerica);
+
